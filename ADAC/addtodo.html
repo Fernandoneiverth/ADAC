@@ -1,0 +1,78 @@
+<DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8">
+    <title>ADAC - To-do list</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+    <body>
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <span class="totheleft" href="#">
+                <img src="imgs/adac_logo.png" alt="" width="150px" height="30px" class="d-inline-block align-text-bottom ">
+              </span>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="addtodo.html">Adicionar Tarefa</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="lista.html">Ver Tarefas</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+            <div class="container">
+              <h1>Liste aqui sua tarefa!</h1>
+              <form method="get" action="api.php">
+                <div class="col-md-12">
+                  <div class="col-md-4">
+                    <label for="local">Selecione o local:</label>
+                    <select id='local' name='local' class="form-select" aria-label="Default select example">
+                      <option selected>Selecione</option>
+                      <option value="Mercado">Mercado</option>
+                      <option value="Farmácia">Farmácia</option>
+                      <option value="Padaria">Padaria</option>
+                      <option value="Açougue">Açougue</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for='produto'>Produto</label>
+                    <input id='produto' name='produto' type='text'>
+                  </div>
+                  <hr>
+                  <div class="col-md-4">
+                    <label for='quantidade'>Quantidade:</label>
+                    <input id='quantidade' name='quantidade' type='number' min="1" value="1">
+                  </div>
+                  <div class="col-md-4">
+                    <label for="tipo">Selecione o local:</label>
+                    <select id='tipo' name='tipo' class="form-select" aria-label="Default select example">
+                      <option selected>Selecione</option>
+                      <option value="Kilograma">Kilograma</option>
+                      <option value="Litro">Litro</option>
+                      <option value="Unidade">Unidade</option>
+                    </select>
+                  </div>
+                  <div class="col-md-12">
+                    <label for='mensagem'>Mensagem:</label>
+                    <input id='mensagem' name='mensagem' type='text'>
+                    <label for='completa'>Completa?</label>
+                    <input type="checkbox" value="completa" id="completa" name="completa"> 
+                  </div>
+                  <div class="col-md-12">
+                    <input type='submit' value='Submeter'>
+                  </div>
+                </form>
+              </div>
+            </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+  </html>
